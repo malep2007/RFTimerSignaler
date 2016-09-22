@@ -19,7 +19,7 @@ while True:
         a = time.time()
     elif x == b'Stop\r\n':
        
-        print("RACE is OVER STOP")
+        print("Timing Stoped")
         
         print("Elapsed time: " + str(a))
         sys.exit(0)
