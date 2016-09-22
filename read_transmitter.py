@@ -13,14 +13,15 @@ ser = serial.Serial(port='COM3',
 
 while True:
     x = ser.readline()
-    a = time.time()
+    
     if x == "b'Start\r\n'":        
-        print(x + "Timing Initiated")            
+        print(x + "Timing Initiated")
+        a = time.time()
     elif x == b'Stop\r\n':
-        b = time.time()
-        print("RACE is OVER STOP")
-        elapsed_time = a - b
-        print("Elapsed time: " + str(elapsed_time))
+       
+        print("Timing Stoped")
+        
+        print("Elapsed time: " + str(a))
         sys.exit(0)
     
     
